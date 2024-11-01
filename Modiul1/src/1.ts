@@ -63,4 +63,28 @@
     isStudent: true,
     age: 20,
   };
+
+//method
+const greeting ={
+  name : 'string',
+  greet(){
+    console.log(`Hello ${this.name}`);
+  }
+}
+
+//Spreed operator 
+const numb : number[] =[1,2,3,4,5,6,7,8,9]
+const NameOfFriends :string[] =  ['roton', 'bob', 'fred','Fred']
+
+
+
+
+
+
+
+
+
+
+
+
 }
