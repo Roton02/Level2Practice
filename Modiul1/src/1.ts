@@ -50,7 +50,7 @@
 
   
 {
-  // Type Alias
+  // Type Alias as
 
   type Student = {
     name: string;
