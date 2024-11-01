@@ -104,6 +104,93 @@ console.log(name); //mezvah vai
 console.log(rest); // {isAdmin : true }
 
 
+{
+  // ternary operator || optional chaining || nullish coalescing operator
+
+  const age: number = 18;
+
+  if (age >= 18) {
+    console.log("adult");
+  } else {
+    console.log("not adult");
+  }
+
+  const isAdult = age >= 18 ? "adult" : "not adult";
+  // console.log({ isAdult });
+
+  //nullish coalescing operator
+  // null / undefined ---> decision making
+
+  const isAuthenticated = "";
+
+  const result1 = isAuthenticated ?? "Guest";
+  const result2 = isAuthenticated ? isAuthenticated : "Guest";
+  console.log({ result1 }, { result2 });
+
+  type User = {
+    name: string;
+    address: {
+      city: string;
+      road: string;
+      presentaddress: string;
+      permanentAddress?: string;
+    };
+  };
+
+  const user: User = {
+    name: "Persian",
+    address: {
+      city: "ctg",
+      road: "Awesome Road",
+      presentaddress: "ctg town",
+    },
+  };
+
+  const permanentAddress =
+    user?.address?.permanentAddress ?? "No Permanent Address";
+  console.log({ permanentAddress });
+  //
+}
+
+
+{
+  // nullable types / unknown types
+
+  const searchName = (value: string | null) => {
+    if (value) {
+      console.log("Searching");
+    } else {
+      console.log("There is nothing to search");
+    }
+  };
+  searchName(null);
+
+  // unknown  typeof
+
+  const getSpeedInMeterPerSecond = (value: unknown) => {
+    if (typeof value === "number") {
+      const convertedSpeed = (value * 1000) / 3600;
+      console.log(`The speed is ${convertedSpeed} ms^-1`);
+    } else if (typeof value === "string") {
+      const [result, unit] = value.split(" ");
+      const convertedSpeed = (parseFloat(result) * 1000) / 3600;
+      console.log(`The speed is ${convertedSpeed} ms^-1`);
+    } else {
+      console.log("wrong input");
+    }
+  };
+  getSpeedInMeterPerSecond(null);
+
+  //never
+
+  const throwError = (msg: string): never => {
+    throw new Error(msg);
+  };
+
+  throwError("mushkil se error hogaya");
+
+  //
+}
 
 
 
