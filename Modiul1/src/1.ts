@@ -72,11 +72,36 @@ const greeting ={
   }
 }
 
-//Spreed operator 
+//Spreed operator  and union operator
 const numb : number[] =[1,2,3,4,5,6,7,8,9]
 const NameOfFriends :string[] =  ['roton', 'bob', 'fred','Fred']
+const newArr : (number|string)[] = [...numb, ...NameOfFriends]   // | is Union operator
+
+const user = { name: "Alice", age: 25 };
+const clonedUser = { ...user, location: "New York" };
+console.log(clonedUser); // Output: { name: 'Alice', age: 25, location: 'New York' }
 
 
+
+//Rest operators and intersection operators
+const func6 = (...arg : number[]) : number =>{
+    const result = arg.reduce((acc , current)=> (acc + current),0)
+    return result
+}
+console.log(func6(1,2,3,4,5,5,6,4,3,3,3)); // that means  it used to  function unknown parameter sending 
+//object example 
+
+const person : {
+  pheroName: string ;
+  isAdmin : boolean;
+  Contract ?: number ;
+} ={
+  pheroName : 'Mezbah Vai ',
+  isAdmin: true,
+}
+const {pheroName , ...rest} = person
+console.log(name); //mezvah vai 
+console.log(rest); // {isAdmin : true }
 
 
 
