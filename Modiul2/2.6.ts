@@ -34,7 +34,7 @@
       role: "student",
     });
 
-    const emni = student1({ emni: "emni" });
+   // const emni = student1({ emni: "emni" }); //akhon r amni amni moner khusi te parba na monu 
     const student3 = student1<{ name: string; role: string; roll: number }>({
       name: "roton",
       role: "student",
@@ -42,5 +42,19 @@
     });
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   //
 }
