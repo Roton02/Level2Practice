@@ -149,6 +149,15 @@
     }
     // console.log(getEmployee(mezba));
   }
+  {
+    //Task 10: Nullish Coalescing
+    const getHumaira = (x : string | undefined | null):string =>{
+      return x ?? 'curi kore palabo'
+    }
+    console.log(getHumaira('yes if you have a better carrier'));
+    console.log(getHumaira(null));
+    console.log(getHumaira(undefined));
+  }
 
   //
 }
