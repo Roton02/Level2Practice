@@ -184,8 +184,51 @@
       return X.filter((value , index)=>(X.indexOf(value) === index) )
       // return [...new Set(X)]
     }
-    console.log(createGenericeArray([1,2,3,4,5,6,7,3,4,5,6,7,8,9,10]));
+    // console.log(createGenericeArray([1,2,3,4,5,6,7,3,4,5,6,7,8,9,10]));
   }
+  {
+    //Task 14: Asynchronous TypeScript and Type Aliases
+    const func = async  () : Promise<string>=>{
+      const res = await fetch('https://jsonplaceholder.typicode.com/posts/1')
+      const data = await res.json()
+      return data 
+    }
+    func().then(res =>{
+      console.log('respone is',res);
+    })
+  }
+//   j
+//     // টাইপ অ্যালিয়াস তৈরি করা
+// type Post = {
+//   userId: number;
+//   id: number;
+//   title: string;
+//   body: string;
+// };
+
+// // অ্যাসিনক্রোনাস ফাংশন
+// const func = async (): Promise<Post> => {
+//   const res = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+
+//   // রেসপন্স চেক করা
+//   if (!res.ok) {
+//       throw new Error('Network response was not ok');
+//   }
+
+//   const data: Post = await res.json(); // JSON ডেটা টাইপ করা
+//   return data; // ডেটা রিটার্ন করা
+// };
+
+// // ফাংশন কল করা এবং Promise থেকে ডেটা নেওয়া
+// func()
+//   .then((result) => {
+//       // console.log(result); // ডেটা কনসোল লগ করা
+//   })
+//   .catch((error) => {
+//       console.error('There was a problem with the fetch operation:', error); // এরর হ্যান্ডলিং
+//   });
+
+//   }
  
   //
 }
