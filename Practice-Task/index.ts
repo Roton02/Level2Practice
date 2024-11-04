@@ -154,10 +154,23 @@
     const getHumaira = (x : string | undefined | null):string =>{
       return x ?? 'curi kore palabo'
     }
-    console.log(getHumaira('yes if you have a better carrier'));
-    console.log(getHumaira(null));
-    console.log(getHumaira(undefined));
+    // console.log(getHumaira('yes if you have a better carrier'));
+    // console.log(getHumaira(null));
+    // console.log(getHumaira(undefined));
   }
+  {
+    //Task 11: Unknown Type
+    const  func = (X : string | number) =>{
+      if (typeof X === "string") {
+        return X.toUpperCase()
+      }else if (typeof X === 'number'){
+        return X*X
+      }
+    }
+    // console.log(func('string'));
+    // console.log(func(10));
+  }
+  
 
   //
 }
