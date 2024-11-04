@@ -91,7 +91,7 @@
   }
   {
     //Task 7: Type Assertion and Narrowing
-    const func = (x : string | number) : number =>{
+    const func = (x : string | number) : number | string | undefined =>{
       if(typeof x ==='string'){
         return (x as string).length
       }
@@ -102,8 +102,52 @@
         console.log('nai..........');
       }
     }
-    console.log(func('roton' as string ));
-    console.log(func(10 as number));
+    // console.log(func('roton' as string ));
+    // console.log(func(10 as number));
+  }
+  {
+    //Task 8: Intersection Types
+    type user ={
+      name : string , 
+      age : number
+    }
+    type admin ={
+      isAdmin : boolean
+    }
+    type userAdmin = user & admin
+    const user = (user : userAdmin) =>{
+      return user
+    }
+    const mezba = {name:'mezba', age:27 , isAdmin:true}
+    // console.log(user(mezba));
+  }
+  {
+    //Task 9: Optional Chaining
+    interface employee {
+      name : string ,
+      age : number,
+      department :{
+        name : string,
+        manager : {
+          name : string,
+          age ?: number
+        }
+      }
+    }
+    const getEmployee = (emploee : employee) : string=>{
+      return emploee?.department?.manager?.name
+    }
+    const mezba : employee ={
+      name:'mezba',
+      age:27,
+      department:{
+        name:'IT',
+        manager:{
+          name:'Rafi',
+        }
+      }
+    }
+    // console.log(getEmployee(mezba));
   }
 
   //
