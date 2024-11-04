@@ -160,7 +160,7 @@
   }
   {
     //Task 11: Unknown Type
-    const  func = (X : string | number) =>{
+    const  func = (X : unknown) =>{
       if (typeof X === "string") {
         return X.toUpperCase()
       }else if (typeof X === 'number'){
@@ -170,7 +170,22 @@
     // console.log(func('string'));
     // console.log(func(10));
   }
-  
-
+  {
+    //Task 12: Never Type
+    const func = (x : string ) : never =>{
+        throw new Error(`This is an error ${x}`)
+    }
+    // func('string')
+  }
+  {
+    //Task 13: Generics with Functions and Interfaces
+    const createGenericeArray =<T> (X : T[]) : T[] =>{
+      const uniqeArray = []
+      return X.filter((value , index)=>(X.indexOf(value) === index) )
+      // return [...new Set(X)]
+    }
+    console.log(createGenericeArray([1,2,3,4,5,6,7,3,4,5,6,7,8,9,10]));
+  }
+ 
   //
 }
