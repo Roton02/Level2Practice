@@ -3,7 +3,7 @@
     //Task 1: Basic Data Types and First Program
     const greeting: string =
       "Hello World, I will complete this course successfully and become a Next level Web Developer!";
-    console.log(greeting);
+    // console.log(greeting);
     const res = greeting;
   }
   {
@@ -73,7 +73,37 @@
   }
   {
     // Task 5: Function Type 
-    
+   const func = (x : string ) : string=>{
+    const res = x.split('').reverse()
+    return res.join('')
+   }
+   const res = func('hello')
+  //  console.log(res);
+  }
+  {
+    //Task 6: Spread and Rest Operators, Destructuring
+    const number = (...number : number[]) : number =>{
+      const res = number.reduce((a,b)=>(a+b), 0)
+      return res
+    }
+    // console.log(number(23,45,23,43,5,342,32,434,34,34,23));
+    // console.log(number(1,2,3,4,));
+  }
+  {
+    //Task 7: Type Assertion and Narrowing
+    const func = (x : string | number) : number =>{
+      if(typeof x ==='string'){
+        return (x as string).length
+      }
+      else if (typeof x === 'number'){
+        return (x as number)*x
+      }
+      else {
+        console.log('nai..........');
+      }
+    }
+    console.log(func('roton' as string ));
+    console.log(func(10 as number));
   }
 
   //
