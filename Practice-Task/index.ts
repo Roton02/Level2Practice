@@ -262,7 +262,15 @@
   }
   const res1 = func({name : 'roton' , role: 'task' , roll: 62323}, 'name')
 }
+{
+  //Re Write
+  const func =<a,b extends keyof a> (X : a,Y : b)=>{
+      return X[Y]
+  }
+  // const res = func({name : 'roton' , role: 'task'}, 'name')
+  const res1 = func({name : 'roton' , role: 'task' , roll: 62323}, 'name')
 
+}
 
 
 
