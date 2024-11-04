@@ -194,7 +194,7 @@
       return data 
     }
     func().then(res =>{
-      console.log('respone is',res);
+      // console.log('respone is',res);
     })
   }
 //   j
@@ -231,4 +231,36 @@
 //   }
  
   //
+{
+  //task15
+  const func = <T>(X:T)   =>{
+    if(typeof X === 'string'){
+      return X.toUpperCase()
+    }
+    else if (typeof X === 'number'){
+      return X*X
+    }
+    else if (typeof X === 'boolean'){
+      return X? 'true' : 'false'
+    }
+    else{
+    return X ?? 'null and undefined';
+    }
+  }
+  const cheekString = func<string>('string')
+  const cheekNumber = func<number>(100)
+  const cheekBoolean = func<boolean>(false)
+  const cheekNull = func<null>(null)
+  const cheekUndefine = func(undefined)
+  console.log(cheekString);
+
+}
+{
+  
+}
+
+
+
+
+
 }
