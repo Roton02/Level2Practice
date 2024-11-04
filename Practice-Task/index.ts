@@ -256,7 +256,11 @@
 
 }
 {
-  
+  //Task 16: Utility Types and Keyof Constraints 
+  const func =<X ,Y extends keyof X> (obj :X , Key: Y) =>{
+    return obj[Key]
+  }
+  const res1 = func({name : 'roton' , role: 'task' , roll: 62323}, 'name')
 }
 
 
