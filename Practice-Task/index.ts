@@ -272,7 +272,33 @@
 
 }
 
+ type Convrter = {
+  [index in 'rotona'| 'roton'] : string
+ 
+ }
+ type obj ={
+  name: 'convrter',
+  role : 'convrter',
+  media : 'media',
+  hasAccess : false,
+  mobile : 13323
 
+ }
 
+ type Convrterr = {
+  [index in keyof obj ]: string;//+
+};//+
+type convrterWithGenerice <T> = {
+  [key in keyof T] : T[key]
+}
+type obj1 = {name: string , role:string , media : string , hasAccess:boolean , mobile: number}
+
+const habi : convrterWithGenerice<obj1> = {
+  name: 'convrter',
+  role : 'convrter',
+  media : 'media',
+  hasAccess : false,
+  mobile : 13323
+ }
 
 }
