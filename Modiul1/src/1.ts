@@ -38,7 +38,7 @@
     return result;
   };
   // console.log(func3([1,2,3,4,95]));
-  // AnonymouseFunction
+  // AnonymouseFunction asas
   const func4 = function (x: number): number {
     console.log("Hello from Anonymous Function");
     return x;
