@@ -286,7 +286,7 @@
  }
 
  type Convrterr = {
-  [index in keyof obj ]: string;//+
+  [index in keyof obj ]: string;//+r
 };//+
 type convrterWithGenerice <T> = {
   [key in keyof T] : T[key]

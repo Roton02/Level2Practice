@@ -43,7 +43,7 @@
     console.log("Hello from Anonymous Function");
     return x;
   };
-  //defult value function
+  //defult value functionsds
   const func5 = (X: number = 23): number => {
     return X * 2;
   };
