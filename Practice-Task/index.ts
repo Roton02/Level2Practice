@@ -301,8 +301,7 @@ const habi : convrterWithGenerice<obj1> = {
   mobile : 13323
  }
 
-//ads
-
+//
 
 }
 
