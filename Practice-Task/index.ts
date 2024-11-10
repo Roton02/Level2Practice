@@ -11,7 +11,7 @@
     type obj = {
       name: string;
       age: number;
-      role?: string;
+      role: string;
     };
 
     const func = (

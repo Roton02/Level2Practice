@@ -57,7 +57,7 @@
     age: number;
     contactNo?: string;
     gender: string;
-    address: string;
+    address?: string;
   };
 
   const student1: Student = {
