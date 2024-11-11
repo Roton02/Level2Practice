@@ -7,7 +7,7 @@
     const res = greeting;
   }
   {
-    //Functions, Optional, and Literal Types
+    //Functions, Optional, and Literal Types and get return values 
     type obj = {
       name: string;
       age: number;
@@ -24,7 +24,7 @@
     const res = func("rafi", 10);
   }
   {
-    //Task 3: Object Types, Type Alias, & Literal Types
+    //Task 3: Object Types, Type Alias, & Literal Types abd get the return value
     type Person = {
       name: string;
       age: number;
