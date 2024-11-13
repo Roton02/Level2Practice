@@ -39,7 +39,7 @@
       gender: "male",
       contactNo: "01712345678",
       address: "Dhaka",
-      friends: ["Rana", "Taimur", "Shahin"],
+      friends: ["Rana", "Taimur", "Shahin" ,'roton'],
     };
   }
   {
